@@ -30,15 +30,13 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   
   
-      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  
   <!-- 加载特效 -->
     <script src="/js/pace.js"></script>
     <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
   <script>
       var yiliaConfig = {
           rootUrl: '/',
-          fancybox: true,
+          fancybox: false,
           animate: true,
           isHome: false,
           isPost: true,
@@ -70,6 +68,46 @@
         
         
         
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
 
         <div id="switch-area" class="switch-area">
             <div class="switch-wrap">
@@ -79,28 +117,32 @@
                         
                             <li><a href="/">博客首页</a></li>
                         
-                            <li><a href="/photo">相册</a></li>
-                        
                         </ul>
                     </nav>
                     <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fl mail" target="_blank" href="/" title="mail">mail</a>
+                                <a class="fl mail" target="self" href="/" title="mail">mail</a>
                             
-                                <a class="fl github" target="_blank" href="https://github.com/crazyshuang" title="github">github</a>
+                                <a class="fl github" target="self" href="https://github.com/crazyshuang" title="github">github</a>
                             
                         </ul>
                     </nav>
                 </section>
                 
                 
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/Cmd-Markdown编辑器/" style="font-size: 10px;">Cmd Markdown编辑器</a> <a href="/tags/md规则/" style="font-size: 10px;">md规则</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/npm使用/" style="font-size: 10px;">npm使用</a> <a href="/tags/什么是全局与局部/" style="font-size: 10px;">什么是全局与局部</a>
+                    </div>
+                </section>
+                
                 
                 
                 <section class="switch-part switch-part3">
                     <div id="js-friends">
                     
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://crazyshuang.github.io/">name</a>
+                      <a target="self" class="main-nav-link switch-friends-link" href="http://crazyshuang.github.io/">name</a>
                     
                     </div>
                 </section>
@@ -142,17 +184,15 @@
                 
                     <li><a href="/">博客首页</a></li>
                 
-                    <li><a href="/photo">相册</a></li>
-                
                 <div class="clearfix"></div>
                 </ul>
             </nav>
             <nav class="header-nav">
                 <div class="social">
                     
-                        <a class="mail" target="_blank" href="/" title="mail">mail</a>
+                        <a class="mail" target="self" href="/" title="mail">mail</a>
                     
-                        <a class="github" target="_blank" href="https://github.com/crazyshuang" title="github">github</a>
+                        <a class="github" target="self" href="https://github.com/crazyshuang" title="github">github</a>
                     
                 </div>
             </nav>
@@ -168,8 +208,6 @@
     </div>
   
   <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
     
     
       <header class="article-header">
@@ -282,7 +320,7 @@
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "self">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
         </p>
     </div>-->
 
@@ -349,14 +387,6 @@
 
 
     
-        <section class="youyan" id="comments">
-  <!-- UY BEGIN -->
-  <div id="uyan_frame"></div>
-  <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2131502"></script>
-  <!-- UY END -->
-</section>
-
-    
 
 
 
@@ -375,7 +405,7 @@
     <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");
-        $(".post-list-item a").attr("target","_blank");
+        $(".post-list-item a").attr("target","self");
         $("#post-nav-button > a:nth-child(2)").click(function() {
             $(".fa-bars, .fa-times").toggle();
             $(".post-list").toggle(300);
@@ -404,9 +434,29 @@
                 &copy; 2017 张双双
             </div>
             <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+                <a href="http://hexo.io/" target="self">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="self">spfk</a> by luuman
             </div>
         </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
         
     </div>
 </footer>
