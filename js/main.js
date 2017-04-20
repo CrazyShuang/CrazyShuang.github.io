@@ -138,13 +138,8 @@ require([], function (){
 
     //是否新窗口打开链接
     if(yiliaConfig.open_in_new == true){
-        $(".article a[href]").attr("target", "_blank")
+        $(".article a[href]").attr("target", "_self ")
     }
-    $(".archive-article-title").attr("target", "_blank");
+    $(".archive-article-title").attr("target", "_self ");
 
-    if($(".instagram").length) {
-        require(['/js/photo.js', '/fancybox/jquery.fancybox.js', '/js/jquery.lazyload.js'], function(obj) {
-            obj.init();
-        });
-    }
 });
